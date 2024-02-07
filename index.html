@@ -6,45 +6,80 @@
     <title>Word Masters</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="wordmasters.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Honk&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="navbar">
+    <div class="game">
       <h1 class="brand">Word Masters</h1>
-    </header>
-    <div class="info-bar">
-      <div class="spiral">🌀</div>
+
+      <div class="info-bar">
+        <div class="spiral">🌀</div>
+      </div>
+      <div class="scoreboard">
+        <div class="scoreboard-letter" id="letter-0"></div>
+        <div class="scoreboard-letter" id="letter-1"></div>
+        <div class="scoreboard-letter" id="letter-2"></div>
+        <div class="scoreboard-letter" id="letter-3"></div>
+        <div class="scoreboard-letter" id="letter-4"></div>
+        <div class="scoreboard-letter" id="letter-5"></div>
+        <div class="scoreboard-letter" id="letter-6"></div>
+        <div class="scoreboard-letter" id="letter-7"></div>
+        <div class="scoreboard-letter" id="letter-8"></div>
+        <div class="scoreboard-letter" id="letter-9"></div>
+        <div class="scoreboard-letter" id="letter-10"></div>
+        <div class="scoreboard-letter" id="letter-11"></div>
+        <div class="scoreboard-letter" id="letter-12"></div>
+        <div class="scoreboard-letter" id="letter-13"></div>
+        <div class="scoreboard-letter" id="letter-14"></div>
+        <div class="scoreboard-letter" id="letter-15"></div>
+        <div class="scoreboard-letter" id="letter-16"></div>
+        <div class="scoreboard-letter" id="letter-17"></div>
+        <div class="scoreboard-letter" id="letter-18"></div>
+        <div class="scoreboard-letter" id="letter-19"></div>
+        <div class="scoreboard-letter" id="letter-20"></div>
+        <div class="scoreboard-letter" id="letter-21"></div>
+        <div class="scoreboard-letter" id="letter-22"></div>
+        <div class="scoreboard-letter" id="letter-23"></div>
+        <div class="scoreboard-letter" id="letter-24"></div>
+        <div class="scoreboard-letter" id="letter-25"></div>
+        <div class="scoreboard-letter" id="letter-26"></div>
+        <div class="scoreboard-letter" id="letter-27"></div>
+        <div class="scoreboard-letter" id="letter-28"></div>
+        <div class="scoreboard-letter" id="letter-29"></div>
+      </div>
     </div>
-    <div class="scoreboard">
-      <div class="scoreboard-letter" id="letter-0"></div>
-      <div class="scoreboard-letter" id="letter-1"></div>
-      <div class="scoreboard-letter" id="letter-2"></div>
-      <div class="scoreboard-letter" id="letter-3"></div>
-      <div class="scoreboard-letter" id="letter-4"></div>
-      <div class="scoreboard-letter" id="letter-5"></div>
-      <div class="scoreboard-letter" id="letter-6"></div>
-      <div class="scoreboard-letter" id="letter-7"></div>
-      <div class="scoreboard-letter" id="letter-8"></div>
-      <div class="scoreboard-letter" id="letter-9"></div>
-      <div class="scoreboard-letter" id="letter-10"></div>
-      <div class="scoreboard-letter" id="letter-11"></div>
-      <div class="scoreboard-letter" id="letter-12"></div>
-      <div class="scoreboard-letter" id="letter-13"></div>
-      <div class="scoreboard-letter" id="letter-14"></div>
-      <div class="scoreboard-letter" id="letter-15"></div>
-      <div class="scoreboard-letter" id="letter-16"></div>
-      <div class="scoreboard-letter" id="letter-17"></div>
-      <div class="scoreboard-letter" id="letter-18"></div>
-      <div class="scoreboard-letter" id="letter-19"></div>
-      <div class="scoreboard-letter" id="letter-20"></div>
-      <div class="scoreboard-letter" id="letter-21"></div>
-      <div class="scoreboard-letter" id="letter-22"></div>
-      <div class="scoreboard-letter" id="letter-23"></div>
-      <div class="scoreboard-letter" id="letter-24"></div>
-      <div class="scoreboard-letter" id="letter-25"></div>
-      <div class="scoreboard-letter" id="letter-26"></div>
-      <div class="scoreboard-letter" id="letter-27"></div>
-      <div class="scoreboard-letter" id="letter-28"></div>
-      <div class="scoreboard-letter" id="letter-29"></div>
+    <div class="rules">
+      <h2 class="rules-title">Rules</h2>
+      <p>
+        Each day a new 5 letter word is generated and it's called "word of the
+        day"
+      </p>
+      <p>You have 6 chances to geuss the word of the day</p>
+      <p>
+        If the letter is <span class="greenRule">green</span> this means you got
+        the right letter in the right order
+      </p>
+      <p>
+        If the letter is <span class="yellowRule">yellow</span> this means you
+        got the right letter but in the wrong order
+      </p>
+      <p>
+        If the letter is <span class="redRule">red</span> this means that the
+        letter is not in this word
+      </p>
+      <p>You can only enter valid 5 letter words</p>
+      <h1 class="rules-title">Have Fun!</h1>
     </div>
   </body>
 </html>
