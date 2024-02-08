@@ -100,60 +100,30 @@ body {
 
 /* visibility hidden means the item is still there and taking up space
    but just not shown. display: none doesn't take up space */
-.hidden {
-  visibility: hidden;
-}
-
 .info-bar {
   display: flex;
   align-items: center;
   justify-content: center;
+  visibility: hidden;
+}
+.show {
+  visibility: visible;
 }
 
 /* winner animation */
-
-@keyframes rainbow {
-  100%,
+.winner {
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
   0% {
-    color: rgb(255, 0, 0);
-  }
-  8% {
-    color: rgb(255, 127, 0);
-  }
-  16% {
-    color: rgb(255, 255, 0);
-  }
-  25% {
-    color: rgb(127, 255, 0);
-  }
-  33% {
-    color: rgb(0, 255, 0);
-  }
-  41% {
-    color: rgb(0, 255, 127);
+    transform: translateY(0);
   }
   50% {
-    color: rgb(0, 255, 255);
+    transform: translateY(-20px);
   }
-  58% {
-    color: rgb(0, 127, 255);
+  100% {
+    transform: translateY(0);
   }
-  66% {
-    color: rgb(0, 0, 255);
-  }
-  75% {
-    color: rgb(127, 0, 255);
-  }
-  83% {
-    color: rgb(255, 0, 255);
-  }
-  91% {
-    color: rgb(255, 0, 127);
-  }
-}
-
-.winner {
-  animation: rainbow 4s infinite linear;
 }
 .greenRule {
   color: darkgreen;
@@ -168,9 +138,14 @@ body {
   color: rgb(108, 111, 110);
   font-family: "IBM Plex Mono", monospace;
   margin-left: 15px;
-  width: 50%;
+  width: 35%;
 }
 .rules-title {
+  font-family: honk;
+  font-size: 50px;
+}
+
+.hf-title {
   font-family: honk;
   font-size: 50px;
 }
