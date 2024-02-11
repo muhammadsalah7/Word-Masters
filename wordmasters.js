@@ -76,8 +76,6 @@ async function init() {
     currentRow++;
     if (currentGuess === word) {
       playerWins();
-      // alert("you win");
-      // brand.classList.add("winner");
       done = true;
       return;
     } else if (currentRow === ROUNDS) {
@@ -153,7 +151,5 @@ function playerWins() {
 
 // Call this function when the player loses
 function playerLoses(word) {
-  console.log("Shaghala wala eh");
-
   showSplashScreen(`Game Over! word of the day was ${word}`);
 }
