@@ -8,9 +8,7 @@ async function init() {
   let currentGuess = "";
   let currentRow = 0;
   let isLoading = true;
-  const res = await fetch(
-    "https://words.dev-apis.com/word-of-the-day?random=1"
-  );
+  const res = await fetch("https://words.dev-apis.com/word-of-the-day?");
   const resObj = await res.json();
   const word = resObj.word.toUpperCase();
   const wordParts = word.split("");
@@ -77,12 +75,14 @@ async function init() {
 
     currentRow++;
     if (currentGuess === word) {
-      alert("you win");
-      brand.classList.add("winner");
+      playerWins();
+      // alert("you win");
+      // brand.classList.add("winner");
       done = true;
       return;
     } else if (currentRow === ROUNDS) {
-      alert(`You Lose, word of the day was ${word}`);
+      playerLoses(word);
+
       done = true;
     }
     currentGuess = "";
@@ -141,3 +141,19 @@ function makeMap(array) {
   return obj;
 }
 init();
+function showSplashScreen(message) {
+  document.getElementById("resultMessage").innerText = message;
+  document.getElementById("splashScreen").style.display = "flex";
+}
+
+// Call this function when the player wins
+function playerWins() {
+  showSplashScreen("Congratulations! You won!");
+}
+
+// Call this function when the player loses
+function playerLoses(word) {
+  console.log("Shaghala wala eh");
+
+  showSplashScreen(`Game Over! word of the day was ${word}`);
+}
